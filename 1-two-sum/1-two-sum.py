@@ -9,9 +9,10 @@ class Solution(object):
         for index,value in enumerate(nums):
             #value as the key so we can utilize the has_key method
             diff = target - value
-             
+            #check if in hashmap first before assignment
             if diff in hashmap:
                 return [hashmap[diff], index]
+            
             hashmap[value] = index
     
     
