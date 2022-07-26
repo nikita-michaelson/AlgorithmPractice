@@ -21,3 +21,18 @@ class Solution(object):
             countT[t[i]] = 1 + countT.get(t[i],0) 
             
         return countS == countT
+    
+    #--------------------------------------------------------------------
+    
+      #first check if same length 
+        if len(s) != len(t):
+            return False
+        
+        #sort both strings, if they are anagrams, they will be the same
+        
+        s = sorted(s)
+        t = sorted(t)
+        if s == t:
+            return True
+        else:
+            return False
