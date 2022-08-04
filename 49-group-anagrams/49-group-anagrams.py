@@ -13,6 +13,6 @@ class Solution(object):
             for letters in stri: 
                 count[ord(letters) - ord("a")] +=1 # a-a = 0, z-a = 25
                 
-            result[tuple(count)].append(stri) # add string to the list which is the key
-            
+            result[tuple(count)].append(stri) # add list of strings as values to the keys, letter counts
+        
         return result.values()
